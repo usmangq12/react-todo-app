@@ -1,0 +1,14 @@
+.outer {
+    width:100%;
+    margin: 30px;
+    text-align: center;
+}
+
+.inner {
+    display: contents;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
