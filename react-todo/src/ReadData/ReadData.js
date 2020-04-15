@@ -45,8 +45,8 @@ const ReadData = ({ todosData, editItem, deleteSelectedUser }) => {
                                     </div> :
                                     <div>
                                         {item.name}
-                                        <DeleteUser item={item} deleteSelectedUser={(selectedUser) => deleteSelectedUser(selectedUser)}></DeleteUser>
                                         <EditData toggleEdit={(toggleValue) => ontoggle(item, toggleValue)}></EditData>
+                                        <DeleteUser item={item} deleteSelectedUser={(selectedUser) => deleteSelectedUser(selectedUser)}></DeleteUser>
                                     </div>
                                 }
                             </div>
