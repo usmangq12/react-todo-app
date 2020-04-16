@@ -12,12 +12,8 @@ const ReadData = ({ todosData, editItem, deleteSelectedUser }) => {
     const [currentItemEdited, setCurrentItemEdited] = useState({});
 
     const ontoggle = (item, toggleValue) => {
-        editItem(item.completed = toggleValue);
         setCurrentItemEdited({ ...item });
-    }
-
-    const onCancelChanges = () => {
-        editItem(currentItemEdited)
+        editItem(item.completed = toggleValue);
     }
 
     return (
@@ -41,7 +37,7 @@ const ReadData = ({ todosData, editItem, deleteSelectedUser }) => {
                                             variant="outlined"
                                         />
                                         <DoneOutlineTwoToneIcon style={{ marginLeft: "250px" }} onClick={() => editItem(item.completed = false)}></DoneOutlineTwoToneIcon>
-                                        <CancelTwoToneIcon style={{ marginLeft: 10 }} onClick={() => onCancelChanges()}></CancelTwoToneIcon>
+                                        <CancelTwoToneIcon style={{ marginLeft: 10 }} onClick={() => editItem(currentItemEdited)}></CancelTwoToneIcon>
                                     </div> :
                                     <div>
                                         {item.name}
