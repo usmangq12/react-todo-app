@@ -1,12 +1,12 @@
 import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
+import { connect } from 'react-redux';
+import { createData, deleteUser, editUser } from './Actions/CRUDActions';
 import './App.css';
 import CreateData from './CreateData/CreateData';
 import ReadData from './ReadData/ReadData';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import AppBar from '@material-ui/core/AppBar';
-import { connect } from 'react-redux';
-import { createData, deleteUser, editUser } from './Actions/CRUDActions';
 
 const App = ({ todosData, createData, editUser, deleteUser }) => {
 
